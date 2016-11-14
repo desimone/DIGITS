@@ -67,7 +67,7 @@ def load_image(path):
     else:
         raise errors.LoadImageError, '"%s" not found' % path
 
-    if image.mode in ['L', 'RGB']:
+    if image.mode in ['L', 'I', 'RGB']:
         # No conversion necessary
         return image
     elif image.mode in ['1']:
